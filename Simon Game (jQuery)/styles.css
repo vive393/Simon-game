@@ -1,0 +1,113 @@
+body {
+  text-align: center;
+  background-color: blueviolet;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+.red:active::before {
+  background-color: red; /* Set your desired glowing color */
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: glow 0.6s ease-out;
+}
+
+.green {
+  background-color: green;
+}
+.green:active::before {
+  background-color: green; /* Set your desired glowing color */
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: glow 0.6s ease-out;
+}
+
+.blue {
+  background-color: blue;
+}
+.blue:active::before {
+  background-color: blue; /* Set your desired glowing color */
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: glow 0.6s ease-out;
+}
+
+.yellow {
+  background-color: yellow;
+}
+.yellow:active::before {
+  background-color: yellow; /* Set your desired glowing color */
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: glow 0.6s ease-out;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+
+/*Adding glowing effect on buttons */
+
+.glow-button {
+  background-color: #fff; /* Set your desired background color */
+  color: #333; /* Set your desired text color */
+  font-size: 1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-button:active::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #fff; /* Set your desired glowing color */
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: glow 0.6s ease-out;
+}
+
+@keyframes glow {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
